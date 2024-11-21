@@ -46,3 +46,6 @@ create table qualidade(
 insert into producao(modelo,chassi,cor,pecas,motor,pneu)values ('UNO','55ABC22','BRANCA','NOVAS','1.0TURBO','PIRELLI');
 insert into producao(modelo,chassi,cor,pecas,motor,pneu)values ('CORSA','45DBD55','AZUL','REULTILIZADA','1.5 TURBO','PIRELLI');
 insert into producao(modelo,chassi,cor,pecas,motor,pneu)values ('MOBI','57BAD52','VERMELHO','NOVAS','1.0','PIRELLI')
+
+insert into estoque(nome,quantidade,descricao,fornecedor,kit_pneu,producao_id)
+VALUES ('rolamento','15','rolamento gasto','comparts','5','2')
