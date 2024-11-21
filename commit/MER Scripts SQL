@@ -1,15 +1,16 @@
 CREATE DATABASE sa_fabrica
 
+
 create table estoque (
 	id SERIAL PRIMARY KEY,
 	nome VARCHAR(200)NOT NULL,
 	quantidade INTEGER NOT NULL,
 	descricao VARCHAR(300),
 	fornecedor VARCHAR(200)NOT NULL,
-	kit_pneu INTEGER
+	kit_pneu INTEGER,
+	producao_id INTEGER,
+	FOREIGN KEY (producao_id) REFERENCES producao(id)
 )
-ALTER TABLE estoque ADD COLUMN producao_id integer
-ALTER TABLE estoque ADD CONSTRAINT fk_producao FOREIGN KEY (producao_id) REFERENCES producao(id)
 
 CREATE TABLE producao(
 	id SERIAL PRIMARY KEY,
