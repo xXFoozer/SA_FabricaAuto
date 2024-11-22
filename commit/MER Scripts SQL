@@ -49,3 +49,6 @@ insert into producao(modelo,chassi,cor,pecas,motor,pneu)values ('MOBI','57BAD52'
 
 insert into estoque(nome,quantidade,descricao,fornecedor,kit_pneu,producao_id)VALUES ('rolamento','15','rolamento gasto','comparts','5','2')
 insert into estoque(nome,quantidade,descricao,fornecedor,kit_pneu,producao_id)VALUES ('bico de vela','8','bico de vela gol quadrado','corema','0',default)
+
+
+insert into qualidade(producao_id,pneus,lataria,motor,portas,interior,farois)values('2','bom estado','amassada e enferrujada','motor recuperado','portas de outra cor','ruim','queimados')
