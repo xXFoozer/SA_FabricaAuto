@@ -1,6 +1,14 @@
 CREATE DATABASE sa_fabrica
 
-
+CREATE TABLE producao(
+	id SERIAL PRIMARY KEY,
+	modelo VARCHAR(100)NOT NULL,
+	chassi VARCHAR(100)NOT NULL,
+	cor VARCHAR(70)NOT NULL,
+	pecas VARCHAR(100)NOT NULL,
+	motor VARCHAR(100)NOT NULL,
+	pneu VARCHAR(85)NOT NULL
+)
 create table estoque (
 	id SERIAL PRIMARY KEY,
 	nome VARCHAR(200)NOT NULL,
@@ -11,16 +19,6 @@ create table estoque (
 	producao_id INTEGER,
 	FOREIGN KEY (producao_id) REFERENCES producao(id)
 )
-
-CREATE TABLE producao(
-	id SERIAL PRIMARY KEY,
-	modelo VARCHAR(100)NOT NULL,
-	chassi VARCHAR(100)NOT NULL,
-	cor VARCHAR(70)NOT NULL,
-	pecas VARCHAR(100)NOT NULL,
-	motor VARCHAR(100)NOT NULL,
-	pneu VARCHAR(85)NOT NULL
-)  
 
 CREATE TABLE usuario(
 	id SERIAL PRIMARY KEY,
